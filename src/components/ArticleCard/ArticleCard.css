@@ -1,0 +1,19 @@
+.article-card {
+    border: rgb(184, 184, 184) 2px solid;
+    border-radius: 15px;
+    padding: 0.5rem;
+    position: relative;
+    margin: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.side-info {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 10px;
+    display: flex;
+    text-align: right;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+}

@@ -1,0 +1,12 @@
+.main-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #cfe3c8;
+  }
+  .main-menu a {
+    padding: 30px;
+  }
