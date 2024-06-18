@@ -9,7 +9,15 @@ export const getArticles = (article_id) => {
     return newsApi
     .get(endpoint)
     .then((data) => {
-        console.log(data)
+        return data
+    })
+    .catch(err => console.log(err))
+}
+
+export const getComments = (article_id) => {
+    return newsApi
+    .get(`/articles/${article_id}/comments`)
+    .then((data) => {
         return data
     })
     .catch(err => console.log(err))
