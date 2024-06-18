@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticles } from "../../../api";
 import "./Article.css";
+import Comments from "../Comments/Comments";
 
 const Article = () => {
   const { article_id } = useParams();
@@ -17,20 +18,25 @@ const Article = () => {
 
   if (isLoading)
     return (
-      <div className = "loading-container">
+      <div className="loading-container">
         <p>Loading, please wait</p>
         <img src="https://cdn.pixabay.com/photo/2015/10/31/12/04/bank-1015368_1280.jpg" />
       </div>
     );
 
   return (
+    <div className = "article-page">
     <main className="article-container">
       <img src={article.article_img_url} alt="" />
       <h2>{article.title}</h2>
-      <body className="article-body">
+      <div className="article-body">
         <p>{article.body}</p>
-      </body>
+      </div>
     </main>
+    <section className = "comments-container">
+        <Comments article_id = {article_id}/>
+    </section>
+    </div>
   );
 };
 

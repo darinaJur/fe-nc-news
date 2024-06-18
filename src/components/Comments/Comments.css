@@ -1,0 +1,11 @@
+.comments-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+}
+
+.comments-container ul {
+    list-style-type: none;
+}

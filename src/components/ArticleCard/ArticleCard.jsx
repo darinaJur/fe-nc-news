@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 const ArticleCard = ({ item }) => {
 
+
   return (
     <li className= "article-card">
     <img src={item.article_img_url} alt="" />
-    <Link to = {`/article/${item.article_id}`}>{item.title}</Link>
+    <Link to = {`/articles/${item.article_id}`}>{item.title}</Link>
       <p>{item.body}</p>
       <div className = "side-info">
       <p>comments: {item.comment_count}</p>

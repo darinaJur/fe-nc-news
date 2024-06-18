@@ -1,0 +1,16 @@
+.comment-card {
+    border: rgb(184, 184, 184) 2px solid;
+    border-radius: 15px;
+    padding: 0.5rem;
+    position: relative;
+    margin-top: 2rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
