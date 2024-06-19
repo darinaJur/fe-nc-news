@@ -12,12 +12,32 @@
     position: absolute;
     bottom: -0.5rem;
     right: 10px;
+    margin-top: 2rem;
     display: flex;
     text-align: right;
-    gap: 0.5rem;
+    gap: 1rem;
     font-size: 0.7rem;
 }
 
-.article-card img {
+.article-card .article-main-image {
     width: 100%
+}
+
+.article-card a {
+    display:block;
+    margin-bottom: 1rem;
+}
+
+.upvote-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.downvote-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 0.5rem;
 }

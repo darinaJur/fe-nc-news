@@ -32,6 +32,7 @@ const Article = () => {
       <div className="article-body">
         <p>{article.body}</p>
       </div>
+      <p>article votes: {article.votes}</p>
     </main>
     <section className = "comments-container">
         <Comments article_id = {article_id}/>

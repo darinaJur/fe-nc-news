@@ -22,3 +22,13 @@ export const getComments = (article_id) => {
     })
     .catch(err => console.log(err))
 }
+
+export const patchArticle = (article_id, voteValue) => {
+    const patchBody = { votes: voteValue }
+    return newsApi
+    .patch(`/articles/${article_id}`, patchBody)
+    .then((data) => {
+        console.log(data, '<<<apiData')
+        return data
+    })
+}
