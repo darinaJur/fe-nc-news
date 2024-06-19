@@ -3,15 +3,15 @@ import { getComments } from "../../../api";
 import CommentCard from "../CommentCard/CommentCard";
 import './Comments.css'
 
-const Comments = ({article_id}) => {
-  const [comments, setComments] = useState([]);
+const Comments = ({article_id, comments, setComments}) => {
+  // const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getComments(article_id)
     .then(({data}) => {
       setComments(data.comments)
     });
-  }, []);
+  }, [article_id]);
 
   return (
     <section className= "comments-container">

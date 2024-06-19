@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { getArticles } from "../../../api";
 import "./Article.css";
 import Comments from "../Comments/Comments";
+import CommentAdder from "../CommentAdder/CommentAdder";
 
 const Article = () => {
   const { article_id } = useParams();
-  const [article, setArticle] = useState("");
+  const [article, setArticle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getArticles(article_id).then(({ data }) => {
@@ -34,8 +36,11 @@ const Article = () => {
       </div>
       <p>article votes: {article.votes}</p>
     </main>
+    <div>
+      <CommentAdder setComments={setComments} article_id={article_id} comments={comments}/>
+    </div>
     <section className = "comments-container">
-        <Comments article_id = {article_id}/>
+        <Comments article_id = {article_id} comments={comments} setComments={setComments}/>
     </section>
     </div>
   );
