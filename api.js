@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newsApi = axios.create({
-    baseURL: "https://nc-news-jx1u.onrender.com/api"
+    baseURL: "https://nc-news-jx1u.onrender.com/api",
 })
 
 export const getArticles = (article_id) => {
@@ -28,7 +28,15 @@ export const patchArticle = (article_id, voteValue) => {
     return newsApi
     .patch(`/articles/${article_id}`, patchBody)
     .then((data) => {
-        console.log(data, '<<<apiData')
         return data
+    })
+}
+
+export const postComment = (commentText, article_id ) => {
+    const requestBody = {username: "tickle122", body: commentText}
+    return newsApi
+    .post(`/articles/${article_id}/comments`, requestBody)
+    .then(({ data }) => {
+        return data.comment
     })
 }

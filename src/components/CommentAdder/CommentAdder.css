@@ -1,0 +1,10 @@
+.new-comment {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
+
+.new-comment textarea {
+    height: 4rem;
+}
