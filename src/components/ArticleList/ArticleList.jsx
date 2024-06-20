@@ -9,8 +9,8 @@ const ArticleList = ({ allArticles, setAllArticles }) => {
   const [errPopup, setErrPopup] = useState(false);
 
   useEffect(() => {
-    getArticles().then(({ data }) => {
-      setAllArticles(data.articles);
+    getArticles().then((articles) => {
+      setAllArticles(articles);
       setIsLoading(false);
     });
   }, []);

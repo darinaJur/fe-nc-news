@@ -4,12 +4,24 @@ const newsApi = axios.create({
     baseURL: "https://nc-news-jx1u.onrender.com/api",
 })
 
-export const getArticles = (article_id) => {
-    const endpoint = article_id ? `/articles/${article_id}` : "/articles"
+export const getArticleById = (article_id) => {
     return newsApi
-    .get(endpoint)
-    .then((data) => {
-        return data
+    .get(`/articles/${article_id}`)
+    .then(({data}) => {
+        console.log(data.article)
+        return data.article
+    })
+    .catch(err => console.log(err))
+}
+
+export const getArticles = (topicQuery) => {
+
+    return newsApi
+    .get(`/articles`, { params: {
+        topic: topicQuery,
+    } })
+    .then(({data}) => {
+        return data.articles
     })
     .catch(err => console.log(err))
 }
@@ -48,4 +60,13 @@ export const deleteComment = (comment_id) => {
     .then((data) => {
         return data
     })
+}
+
+export const getTopics = () => {
+    return newsApi
+    .get("/topics")
+    .then(({ data: {topics}} ) => {
+        return topics
+    })
+    .catch(err => console.log(err))
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticles } from "../../../api";
+import { getArticleById } from "../../../api";
 import "./Article.css";
 import Comments from "../Comments/Comments";
 import CommentAdder from "../CommentAdder/CommentAdder";
@@ -12,8 +12,8 @@ const Article = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    getArticles(article_id).then(({ data }) => {
-      setArticle(data.article);
+    getArticleById(article_id).then(( data ) => {
+      setArticle(data);
       setIsLoading(false);
     });
   }, [article_id]);
