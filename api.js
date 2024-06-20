@@ -7,20 +7,21 @@ const newsApi = axios.create({
 export const getArticleById = (article_id) => {
     return newsApi
     .get(`/articles/${article_id}`)
-    .then(({data}) => {
-        console.log(data.article)
+    .then(({ data }) => {
         return data.article
     })
     .catch(err => console.log(err))
 }
 
-export const getArticles = (topicQuery) => {
+export const getArticles = (topicQuery, sortQuery, orderQuery) => {
 
     return newsApi
     .get(`/articles`, { params: {
         topic: topicQuery,
+        sort_by: sortQuery,
+        order: orderQuery,
     } })
-    .then(({data}) => {
+    .then(({ data }) => {
         return data.articles
     })
     .catch(err => console.log(err))
