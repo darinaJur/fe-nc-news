@@ -33,10 +33,19 @@ export const patchArticle = (article_id, voteValue) => {
 }
 
 export const postComment = (commentText, article_id ) => {
-    const requestBody = {username: "tickle122", body: commentText}
+
+    const requestBody = {username: "tickle122" , body: commentText}
     return newsApi
     .post(`/articles/${article_id}/comments`, requestBody)
     .then(({ data }) => {
         return data.comment
+    })
+}
+
+export const deleteComment = (comment_id) => {
+    return newsApi
+    .delete(`/comments/${comment_id}`)
+    .then((data) => {
+        return data
     })
 }

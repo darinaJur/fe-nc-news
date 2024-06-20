@@ -4,7 +4,6 @@ import CommentCard from "../CommentCard/CommentCard";
 import './Comments.css'
 
 const Comments = ({article_id, comments, setComments}) => {
-  // const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getComments(article_id)
@@ -17,7 +16,7 @@ const Comments = ({article_id, comments, setComments}) => {
     <section className= "comments-container">
     <ul>
       {comments.map((commentItem) => {
-        return <CommentCard key={commentItem.comment_id} item={commentItem} />;
+        return <CommentCard key={commentItem.comment_id} item={commentItem} setComments={setComments}/>;
       })}
     </ul>
     </section>
