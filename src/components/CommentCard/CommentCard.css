@@ -21,3 +21,14 @@
     cursor: pointer;
     margin-top: 0.5rem;
 }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    padding: 1rem;
+    background-color: #ececec;
+    color: rgb(60, 60, 60);
+    border-radius: 5px;
+    z-index: 1000;
+  }

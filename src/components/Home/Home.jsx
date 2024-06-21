@@ -11,9 +11,9 @@ const Home = () => {
   const [topics, setTopics] = useState([])
   const [searchParams, setSearchParams] = useSearchParams([])
 
-  const topicQuery = searchParams.get("topic") //gets topic value
-  const sortQuery = searchParams.get("sort_by") //gets sort value
-  const orderQuery = searchParams.get("order") //gets order 
+  const topicQuery = searchParams.get("topic")
+  const sortQuery = searchParams.get("sort_by")
+  const orderQuery = searchParams.get("order")
 
   useEffect(() => {
     getTopics()

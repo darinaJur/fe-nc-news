@@ -10,7 +10,6 @@ export const getArticleById = (article_id) => {
     .then(({ data }) => {
         return data.article
     })
-    .catch(err => console.log(err))
 }
 
 export const getArticles = (topicQuery, sortQuery, orderQuery) => {
