@@ -15,68 +15,9 @@ const ArticleList = ({ allArticles, setAllArticles }) => {
     });
   }, []);
 
-  const upVote = (article_id) => {
-    setAllArticles((allArticles) => {
-      return allArticles.map((article) => {
-        if (article.article_id === article_id) {
-          return { ...article, votes: article.votes + 1 };
-        }
-        return article;
-      });
-    });
-
-    patchArticle(article_id, 1).catch((err) => {
-      setAllArticles((allArticles) => {
-        const revertedVotes = allArticles.map((article) => {
-          if (article.article_id === article_id) {
-            return { ...article, votes: article.votes - 1 };
-          }
-          return article;
-        });
-        return revertedVotes;
-      });
-      setError("Something went wrong");
-      setErrPopup(true);
-      setTimeout(() => {
-        setErrPopup(false);
-      }, 1500);
-    });
-  };
-
-  const downVote = (article_id) => {
-    setAllArticles((allArticles) => {
-      return allArticles.map((article) => {
-        if (article.article_id === article_id) {
-          return { ...article, votes: article.votes - 1 };
-        }
-        return article;
-      });
-    });
-
-    patchArticle(article_id, -1).catch((err) => {
-      setAllArticles((allArticles) => {
-        const revertedVotes = allArticles.map((article) => {
-          if (article.article_id === article_id) {
-            return { ...article, votes: article.votes + 1 };
-          }
-          return article;
-        });
-        return revertedVotes;
-      });
-      setError("Something went wrong");
-      setErrPopup(true);
-      setTimeout(() => {
-        setErrPopup(false);
-      }, 1500);
-    });
-  };
-
   if (isLoading)
     return (
-      <div className="loading-container">
-        <p>Loading, please wait</p>
-        <img src="https://cdn.pixabay.com/photo/2015/10/31/12/04/bank-1015368_1280.jpg" />
-      </div>
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 
   return (
@@ -88,8 +29,6 @@ const ArticleList = ({ allArticles, setAllArticles }) => {
             <ArticleCard
               key={item.article_id}
               item={item}
-              upVote={upVote}
-              downVote={downVote}
             />
           );
         })}

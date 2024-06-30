@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import Article from "./components/Article/Article";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/articles/:article_id" element={<Article />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <NavBar />
+      <Footer />
     </div>
   );
 }

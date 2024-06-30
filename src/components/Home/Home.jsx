@@ -5,11 +5,14 @@ import { useSearchParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import './Home.css'
+import Article from "../Article/Article";
 
 const Home = () => {
   const [allArticles, setAllArticles] = useState([]);
   const [topics, setTopics] = useState([])
   const [searchParams, setSearchParams] = useSearchParams([])
+  const [isLoading, setIsLoading] = useState(true);
 
   const topicQuery = searchParams.get("topic")
   const sortQuery = searchParams.get("sort_by")
@@ -19,6 +22,7 @@ const Home = () => {
     getTopics()
     .then((data) => {
       setTopics(data)
+      setIsLoading(false);
     })
 
     getArticles(topicQuery, sortQuery, orderQuery)
@@ -35,10 +39,14 @@ const Home = () => {
     setSearchParams(newParams)
   }
 
+  if (isLoading)
   return (
-    <main>
-      <div>
-      <h2>Topics:</h2>
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  )
+
+  return (
+    <main className = "main-container">
+      <div className = "topic-container">
       <div className="topic-list">
         {topics.map((topic, index) => {
           return (
@@ -54,18 +62,26 @@ const Home = () => {
         })}
       </div>
       </div>
-      <DropdownButton id="dropdown-basic-button" title="Sort By">
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "created_at", order: "asc" }) }}> Date, ascending </Dropdown.Item>
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "created_at", order: "desc" }) }}> Date, descending </Dropdown.Item>
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "votes", order: "asc" }) }}> Votes, ascending </Dropdown.Item>
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "votes", order: "desc" }) }}> Votes, descending </Dropdown.Item>
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "comment_count", order: "asc" }) }}> Comment Count, ascending </Dropdown.Item>
-        <Dropdown.Item onClick={() => { setQueries({ sort_by: "comment_count", order: "desc" }) }}> Comment Count, descending </Dropdown.Item>
+      <div className = "sorting-articles-container">
+      <div className = "sorting-container">
+      <h3>LATEST NEWS</h3>
+      <div className = 'sorting-buttons'>
+      <DropdownButton id="dropdown-basic-button" variant='secondary' title="Sort By">
+        <Dropdown.Item onClick={() => { setQueries({ sort_by: "created_at"}) }}> Date </Dropdown.Item>
+        <Dropdown.Item onClick={() => { setQueries({ sort_by: "votes"}) }}> Votes </Dropdown.Item>
+        <Dropdown.Item onClick={() => { setQueries({ sort_by: "comment_count" }) }}> Comment Count </Dropdown.Item>
       </DropdownButton>
+      <DropdownButton id="dropdown-basic-button" variant='secondary' title="Order">
+        <Dropdown.Item onClick={() => { setQueries({ order: "asc" }) }}> Ascending </Dropdown.Item>
+        <Dropdown.Item onClick={() => { setQueries({ order: "desc" }) }}> Descending </Dropdown.Item>
+      </DropdownButton>
+      </div>
+      </div>
       <ArticleList
         allArticles={allArticles}
         setAllArticles={setAllArticles}
       />
+      </div>
     </main>
   );
 };

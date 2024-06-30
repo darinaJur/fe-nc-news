@@ -1,43 +1,102 @@
 .article-card {
-    border: rgb(184, 184, 184) 2px solid;
-    border-radius: 15px;
-    padding: 0.5rem;
-    position: relative;
-    margin: 2rem;
-    max-width: 600px;
-    width: 100%;
+  border: 2px solid rgb(184, 184, 184);
+  border-radius: 15px;
+  position: relative;
+  max-width: 400px;
+  height: 105%;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.article-card:hover {
+  transform: scale(1.05);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.article-main-image {
+  width: 100%;
+  height: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  object-fit: cover;
+}
+
+.content-container {
+  padding: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.article-title {
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .side-info {
-    position: absolute;
-    bottom: -0.5rem;
-    right: 10px;
-    margin-top: 2rem;
-    display: flex;
-    text-align: right;
-    gap: 1rem;
-    font-size: 0.7rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.8rem;
 }
 
-.article-card .article-main-image {
-    width: 100%
+.side-info img {
+  width: 20px;
+  height: auto;
 }
 
-.article-card a {
-    display:block;
-    margin-bottom: 1rem;
+.likes-image {
+  padding-bottom: 1px;
 }
 
-.upvote-button {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-top: 0.5rem;
+.side-info p {
+  margin: 0;
 }
 
+.upvote-button,
 .downvote-button {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.content-container h2 {
+  display: block;
+  font-size: 1.18em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.image-wrapper p {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 15px;
+  color: #30383f;
+  font-size: 16px;
+}
+
+.author {
+  font-size: 0.8rem;
+  position: absolute;
+  padding-left: 1rem;
+  bottom: 1px;
 }
