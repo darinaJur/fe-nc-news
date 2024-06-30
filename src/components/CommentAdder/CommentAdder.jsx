@@ -33,13 +33,13 @@ const CommentAdder = ({ setComments, article_id }) => {
   };
 
   return (
-    <div>
+    <div className = "new-comment-container">
       {error ? errPopup && <div className="popup">{error}</div> : null}
       <form className="new-comment">
         <textarea
           value={newComment}
           onChange={handleChange}
-          placeholder="Write your comment here"
+          placeholder="Write your comment here..."
           required
         />
       </form>

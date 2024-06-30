@@ -7,6 +7,9 @@
 
 .new-comment textarea {
     height: 4rem;
+    margin-bottom: 1rem;
+    border: rgb(133, 133, 133) 2px solid;
+    padding-left: 0.5rem;
 }
 
 .popup {
@@ -19,3 +22,14 @@
     border-radius: 5px;
     z-index: 1000;
   }
+
+.new-comment-container {
+    border: rgb(184, 184, 184) 2px solid;
+    border-radius: 15px;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: #798b9d51;
+}

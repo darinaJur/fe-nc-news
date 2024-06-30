@@ -1,20 +1,61 @@
 .article-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px;
-    margin-bottom: 10rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+  position: relative;
 }
 
 .article-container img {
-    width: 100%
+  width: 100%;
+}
+
+.article-container h2 {
+    margin: 2rem;
 }
 
 .article-body {
-    text-align: justify;
-    font-size: 1rem;
+  text-align: justify;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 .loading-container img {
-    width: 300px;
+  width: 300px;
+  height: auto;
+}
+
+.voting-section img {
+    padding-bottom: 1px;
+    width: 20px;
     height: auto;
+    cursor: pointer;
+}
+
+.like-button {
+    margin-left: 0.8rem;
+}
+
+.dislike-button {
+    margin-left: 0.4rem;
+}
+
+.voting-section {
+    background-color: rgba(48, 56, 63, 0.3);
+    padding: 0.4rem;
+    padding-bottom: 0rem;
+    border-radius: 15px;
+    width: 8rem;
+    right: 0;
+    padding: 0.5rem;
+}
+
+.article-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+  
+.vote-element {
+    margin: 0;
 }
