@@ -10,14 +10,23 @@ const ArticleList = ({ allArticles, setAllArticles }) => {
 
   useEffect(() => {
     getArticles().then((articles) => {
-      setAllArticles(articles);
+      setAllArticles(articles.articles);
       setIsLoading(false);
     });
   }, []);
 
   if (isLoading)
     return (
-      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     );
 
   return (
@@ -25,12 +34,7 @@ const ArticleList = ({ allArticles, setAllArticles }) => {
       {error ? errPopup && <div className="popup">{error}</div> : null}
       <ul>
         {allArticles.map((item) => {
-          return (
-            <ArticleCard
-              key={item.article_id}
-              item={item}
-            />
-          );
+          return <ArticleCard key={item.article_id} item={item} />;
         })}
       </ul>
     </section>

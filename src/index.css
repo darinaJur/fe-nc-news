@@ -1,12 +1,12 @@
 :root {
-  --font-family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: "Open Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,12 +16,13 @@
 
 a {
   font-weight: 500;
-  color: #30383f;
+  color: #57423f;
   text-decoration: inherit;
 }
 
 body {
   font-family: var(--font-family);
+  color: #322624;
   margin: 0;
 }
 
@@ -37,7 +38,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: #30383f;
+  color: #57423f;
   cursor: pointer;
   transition: border-color 0.25s;
 }

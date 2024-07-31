@@ -1,0 +1,65 @@
+.about-container {
+  width: 900px;
+  margin: auto;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  background-color: rgba(243, 243, 243, 0.767);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.about-container h3 {
+  margin-left: 5px;
+  margin-bottom: 1.5rem;
+}
+.what-is-container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  margin-top: 1rem;
+}
+
+.tech-stack-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.tech-list-container {
+  margin-top: 1rem;
+  display: flex;
+  flex: wrap;
+  gap: 5rem;
+}
+
+.list-title {
+  font-weight: 500;
+}
+
+.user-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-container ul {
+  margin-top: 1rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.user-container ul li {
+  padding-bottom: 0.5rem;
+}
+
+.future-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+}

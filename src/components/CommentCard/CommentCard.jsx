@@ -51,7 +51,7 @@ const CommentCard = ({ item, setComments }) => {
       <p>{item.body}</p>
       <div className="comment-info">
         <div className="comment-author">by {item.author}</div>
-        <div className="votes"> votes: {item.votes}</div>
+
         {deleteCommentBtn ? (
           <img
             onClick={() => handleClick(item.comment_id)}

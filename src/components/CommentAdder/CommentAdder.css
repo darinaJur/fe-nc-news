@@ -1,35 +1,38 @@
 .new-comment {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
 }
 
 .new-comment textarea {
-    height: 4rem;
-    margin-bottom: 1rem;
-    border: rgb(133, 133, 133) 2px solid;
-    padding-left: 0.5rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  border: rgb(159, 159, 159) 2px solid;
+  padding-left: 0.5rem;
+  width: 100%;
+  margin-left: 0;
 }
 
 .popup {
-    position: fixed;
-    top: 50%;
-    right: 50%;
-    padding: 1rem;
-    background-color: #ececec;
-    color: rgb(60, 60, 60);
-    border-radius: 5px;
-    z-index: 1000;
-  }
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: rgb(60, 60, 60);
+  border-radius: 5px;
+  z-index: 1000;
+}
 
 .new-comment-container {
-    border: rgb(184, 184, 184) 2px solid;
-    border-radius: 15px;
-    margin-top: 5rem;
-    padding: 1rem;
+  border: rgb(184, 184, 184) 2px solid;
+  border-radius: 15px;
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: white;
 }
 
 button:hover {
-    background-color: #798b9d51;
+  background-color: #798b9d51;
 }

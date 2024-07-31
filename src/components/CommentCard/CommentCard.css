@@ -1,33 +1,34 @@
 .comment-card {
-    border: rgb(184, 184, 184) 2px solid;
-    border-radius: 15px;
-    padding: 0.5rem;
-    position: relative;
-    margin-top: 2rem;
-    width: 100%;
+  border: rgb(184, 184, 184) 2px solid;
+  border-radius: 15px;
+  padding: 0.5rem;
+  position: relative;
+  margin-top: 2rem;
+  width: 800px;
+  background-color: white;
 }
 
 .comment-info {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .delete-button {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .popup {
-    position: fixed;
-    top: 50%;
-    right: 50%;
-    padding: 1rem;
-    background-color: #ececec;
-    color: rgb(60, 60, 60);
-    border-radius: 5px;
-    z-index: 1000;
-  }
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  padding: 1rem;
+  background-color: #ececec;
+  color: rgb(60, 60, 60);
+  border-radius: 5px;
+  z-index: 1000;
+}

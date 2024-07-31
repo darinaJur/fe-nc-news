@@ -1,16 +1,20 @@
 .article-page {
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 5rem;
   padding: 50px;
   position: relative;
+  background-color: rgba(243, 243, 243, 0.767);
+  border-radius: 15px;
 }
 
 .article-container img {
   width: 100%;
+  border-radius: 15px;
 }
 
 .article-container h2 {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 .article-body {
@@ -25,37 +29,71 @@
 }
 
 .voting-section img {
-    padding-bottom: 1px;
-    width: 20px;
-    height: auto;
-    cursor: pointer;
+  padding-bottom: 1px;
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 0;
 }
 
 .like-button {
-    margin-left: 0.8rem;
+  margin-left: 0.8rem;
 }
 
 .dislike-button {
-    margin-left: 0.4rem;
+  margin-left: 0.4rem;
 }
 
 .voting-section {
-    background-color: rgba(48, 56, 63, 0.3);
-    padding: 0.4rem;
-    padding-bottom: 0rem;
-    border-radius: 15px;
-    width: 8rem;
-    right: 0;
-    padding: 0.5rem;
+  background-color: #54433a45;
+  padding: 0.4rem;
+  padding-bottom: 0rem;
+  border-radius: 15px;
+  width: 8rem;
+  right: 0;
+  padding: 0.5rem;
 }
 
 .article-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
-  
+
 .vote-element {
-    margin: 0;
+  margin: 0;
+}
+
+.title-and-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.article-container .delete-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: 0rem;
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.title-and-delete h2 {
+  margin: 0;
+}
+
+.article-main-content {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem 1rem;
+}
+
+.article-image {
+  margin-bottom: 3rem;
 }

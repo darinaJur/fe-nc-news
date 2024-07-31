@@ -1,0 +1,43 @@
+.post-article-page {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 25rem;
+  margin-top: 3rem;
+  background-color: rgba(243, 243, 243, 0.767);
+  border-radius: 15px;
+  padding: 3rem 0rem;
+}
+
+.post-article-page h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.post-article-page form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+
+.post-article-page form label {
+  margin-bottom: 2rem;
+  font-size: 15px;
+}
+
+.post-article-page form input,
+textarea {
+  margin-left: 20px;
+  background-color: white;
+  border: none;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  color: black;
+  width: 70%;
+  padding-left: 0.5rem;
+}
+
+.post-article-page textarea {
+  height: 180px;
+}

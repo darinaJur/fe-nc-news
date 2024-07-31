@@ -1,11 +1,14 @@
 header {
   display: flex;
   align-items: center;
-  border-bottom: 17px solid #798B9D;
-  padding: 0.5rem;
+  padding: 0rem 0.8rem;
   color: black;
-  font-size: x-large;
+  font-size: 17px;
   margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #ffe484, #ffb743);
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -21,31 +24,65 @@ header {
 }
 
 header a {
-  font-weight: 500;
-  color: #30383f;
+  font-weight: 600;
+  color: #57423f;
   text-decoration: none;
-  padding: 0.5rem;
-}
-
-.navbar-container a:hover {
-  background-color: #798b9d51;
-  border-radius: 15%;
 }
 
 .navbar-container a img {
   padding: 0;
   background-color: transparent;
-  
 }
 
-.navbar-container img {
-  width: 70px;
-  border-radius: 50%;
-  background-color: white;
+.avatar-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.avatar-container img {
+  width: 60px;
+  height: 60px;
+  object-fit: scale-down;
+  border-radius: 100%;
+}
+
+.logo-components {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  width: 200px;
+  width: 170px;
   height: auto;
-  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img:hover {
+  cursor: pointer;
+}
+
+.logo p {
+  margin-bottom: 0;
+  color: #ff820e;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-container button {
+  background-color: white;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.avatar-container button:hover {
+  background-color: white;
 }
