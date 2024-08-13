@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ArticleList from "../ArticleList/ArticleList";
 import { getArticles, getTopics } from "../../../api";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -16,6 +16,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
+  const location = useLocation()
 
   const topicQuery = searchParams.get("topic");
   const sortQuery = searchParams.get("sort_by");
@@ -23,9 +24,10 @@ const Home = () => {
   const pageQuery = parseInt(searchParams.get("p") || page);
   const limitQuery = searchParams.get("limit") || 9;
 
-  console.log(searchParams, "<<<pageQuery");
+
 
   useEffect(() => {
+    
     if (pageQuery !== page) {
       setPage(pageQuery);
     }
@@ -34,18 +36,22 @@ const Home = () => {
       setIsLoading(false);
     });
 
-    getArticles(topicQuery, sortQuery, orderQuery, pageQuery, limitQuery).then(
+    getArticles(topicQuery, sortQuery, orderQuery, pageQuery, limitQuery, searchParams).then(
       (data) => {
         setAllArticles(data.articles);
         setTotalCount(data.total_count);
         setIsLoading(false);
       }
     );
-  }, [topicQuery, sortQuery, orderQuery, pageQuery, limitQuery, page]);
+  }, [topicQuery, sortQuery, orderQuery, pageQuery, limitQuery, page, location]);
 
   const setQueries = ({ topic, sort_by, order, p, limit }) => {
     const newParams = new URLSearchParams(searchParams);
-    if (topic) newParams.set("topic", topic);
+    if (topic) {
+    newParams.set("p", 1)
+    newParams.set("topic", topic);
+    }
+
     if (sort_by) newParams.set("sort_by", sort_by);
     if (order) newParams.set("order", order);
     if (p) newParams.set("p", p);
