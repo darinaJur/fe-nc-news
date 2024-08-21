@@ -74,7 +74,7 @@ const About = () => {
               Functionality to vote on an individual comment.
             </li>
             <li>
-              Functinality to open a user profile page and ability to edit it.
+              Functionality to open a user profile page and ability to edit it.
             </li>
           </ul>
           </div>
