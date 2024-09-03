@@ -17,7 +17,7 @@ const About = () => {
           <h5>Tech Stack</h5>
           <div className="tech-list-container">
             <div className="back-end">
-              <p className="list-title">Back-end (<a href="https://github.com/darinaJur/nc-news" target="_blank">GitHub</a>):</p>
+              <p className="list-title">Back-end (<a href="https://github.com/darinaJur/nc-news" target="_blank">GitHub Repo</a>):</p>
               <ul>
                 <li>JavaScript</li>
                 <li>PSQL</li>
@@ -27,7 +27,7 @@ const About = () => {
             </div>
 
             <div className="front-end">
-              <p className="list-title">Front-end (<a href="https://github.com/darinaJur/fe-nc-news" target="_blank">GitHub</a>):</p>
+              <p className="list-title">Front-end (<a href="https://github.com/darinaJur/fe-nc-news" target="_blank">GitHub Repo</a>):</p>
               <ul>
                 <li>JavaScript</li>
                 <li>React JS</li>
